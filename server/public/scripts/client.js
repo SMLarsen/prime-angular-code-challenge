@@ -13,6 +13,6 @@ app.config(['$routeProvider', function($routeProvider) {
             controllerAs: 'hl'
         })
         .otherwise({
-            redirectTo: 'hero-entry'
+            redirectTo: 'hero-listing'
         });
 }]);

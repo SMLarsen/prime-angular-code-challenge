@@ -1,1 +1,24 @@
-<h1>Hero Listing</h1>
+<div class="hero-listing col-md-9">
+    <h2>Hero Listing</h2>
+
+    <table class="table table-bordered">
+        <thead>
+            <tr>
+                <th>Persona</th>
+                <th>Alias</th>
+                <th>Power</th>
+                <th>Description</th>
+            </tr>
+        </thead>
+        <tbody>
+
+            <tr class="heroRow" ng-repeat="hero in hl.heroes">
+                <td>{{hero.alias}}</td>
+                <td>{{hero.persona}}</td>
+                <td>{{hero.name}}</td>
+                <td>{{hero.description}}</td>
+            </tr>
+        </tbody>
+    </table>
+
+</div>
