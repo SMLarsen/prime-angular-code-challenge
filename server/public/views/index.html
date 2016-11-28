@@ -3,8 +3,27 @@
   <head>
     <meta charset="utf-8">
     <title>Department of Emerging Superhero Knowledge</title>
+    <!-- <link rel="stylesheet" href="/vendor/bootstrap.min.css" /> -->
+    <link rel="stylesheet" href="/styles/styles.css" />
+    <script src="/vendor/angular.min.js" type="text/javascript"></script>
+    <script src="/vendor/angular-route.min.js" type="text/javascript"></script>
+    <script src="/scripts/client.js" type="text/javascript"></script>
+    <script src="/scripts/hero.entry.controller.js" type="text/javascript"></script>
+    <script src="/scripts/hero.listing.controller.js" type="text/javascript"></script>
+
   </head>
-  <body>
-    <h1>Department of Emerging Superhero Knowledge</h1>
-  </body>
+
+    <body ng-app="HeroApp">
+      <h1>Department of Emerging Superhero Knowledge</h1>
+      <div class="container">
+        <!-- <header ng-include="'/views/template/header.html'" class="jumbotron text-center"></header> -->
+
+        <!-- <div ng-include="'/views/template/nav.html'"></div> -->
+
+        <main ng-view></main>
+
+        <!-- <footer class="text-center" ng-include="'/views/template/footer.html'"></footer> -->
+      </div>
+    </body>
+
 </html>
