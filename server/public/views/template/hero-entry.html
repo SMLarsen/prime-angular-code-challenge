@@ -1,1 +1,26 @@
 <h1>Hero Entry</h1>
+
+{{he.powers}}
+<form id="hero-form">
+
+    <div class="form-group">
+        <label for="persona">Persona</label>
+        <input class="form-control" type="text" ng-model="he.newHero.persona" name="persona" />
+    </div>
+
+    <div class="form-group">
+        <label for="alias">Alias</label>
+        <input class="form-control" type="text" ng-model="he.newHero.alias" name="alias" />
+    </div>
+    <div class="form-group">
+        <label for="month">Superpower</label>
+        <select class="form-control" ng-model="he.newHero.power_id" name="power_id" ng-options="item as item.name for item in he.powers track by item.id"></select>
+
+
+<!-- <select ng-change="test(selectedId)" ng-model="selectedId" ng-options="id.id as id.pseudo for id in idList"> </select> -->
+
+
+    </div>
+
+    <button class="btn btn-primary" ng-click="he.addHero()"><i class="material-icons">add</i></button>
+</form>
