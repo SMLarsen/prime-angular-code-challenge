@@ -15,6 +15,16 @@ app.controller('HeroListingController', ['$http', function($http) {
             });
     } // end function getHeroes
 
+// function: deleteHero - delete
+self.deleteHero = function(hero) {
+    console.log('delete hero: ', hero);
+    $http.delete('/heroes/' + hero.id)
+        .then(function(response) {
+            console.log('DELETE finished.');
+            getHeroes();
+        });
+}; // end deleteHero
+
 
 
 }]); // end Controller: Hero Listing
