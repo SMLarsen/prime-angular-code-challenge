@@ -13,10 +13,11 @@
         <tbody>
 
             <tr class="heroRow" ng-repeat="hero in hl.heroes">
-                <td>{{hero.alias}}</td>
-                <td>{{hero.persona}}</td>
+                <td><input type="text" name="" value="{{hero.alias}}"></td>
+                <td><input type="text" name="" value="{{hero.persona}}"></td>
                 <td>{{hero.name}}</td>
                 <td>{{hero.description}}</td>
+                <td><button class="btn btn-primary editButton" ng-click="hl.editHero(hero)">Edit</button></td>
                 <td><button class="btn btn-danger deleteButton" ng-click="hl.deleteHero(hero)">Delete</button></td>
 
             </tr>

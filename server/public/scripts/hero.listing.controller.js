@@ -25,6 +25,16 @@ self.deleteHero = function(hero) {
         });
 }; // end deleteHero
 
+// function: editHero - edit
+self.editHero = function(hero) {
+    console.log('edit hero: ', hero);
+    $http.put('/heroes/' + hero.id)
+        .then(function(response) {
+            console.log('UPDATE finished.');
+            getHeroes();
+        });
+}; // end editHero
+
 
 
 }]); // end Controller: Hero Listing
